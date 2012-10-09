@@ -1,0 +1,8 @@
+*.pyc
+settings.py
+*.json
+*~
+django
+media/temp
+*.swp
+monitor

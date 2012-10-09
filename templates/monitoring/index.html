@@ -1,0 +1,15 @@
+<html>
+    <title>Temperature Monitoring Project</title>
+    <p> This is only a test </p>
+
+{% if sensor_list %}
+    <ul>
+    {% for sensor_id in sensor_list %}
+        <p>{{ sensor_id.nickname }}</p>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No sensors are available.</p>
+{% endif %}
+
+</html>
