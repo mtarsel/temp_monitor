@@ -4,7 +4,7 @@ from django.contrib import admin
 admin.autodiscover()
 
 urlpatterns = patterns('',
-    url(r'^index', 'monitoring.views.index'),
+    url(r'^$', 'monitoring.views.index'),
     # url(r'^temp_monitor/', include('temp_monitor.foo.urls')),
 
     # Uncomment the admin/doc line below to enable admin documentation:
