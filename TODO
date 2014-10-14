@@ -1,0 +1,31 @@
+Follow these steps for the arduino/django temp monitor project:
+
+
+1. Start Django project with heroku. Push to heroku
+    (maybe steal floating-garden)
+
+2. Copy temp_monitor project from github into heroku project. Once done, delete current temp_monitor project and start new sexy repo on github
+
+3. On our local machine, add timestamp and temperature to sqlite3 database.
+    More info: http://zetcode.com/db/sqlitepythontutorial/
+
+    NOTE: make sure to add it to correct model with django
+
+    pseudocode:
+
+    Class arduinoData(models.Model):
+        timestamp = time
+        tempF = float
+
+    I would do something like this and then check the tables from sqlite3 shell.
+
+
+4. Update heroku database with values from local database:
+     heroku pg:push mylocaldb HEROKU_POSTGRESQL_MAGENTA --app sushi
+
+     More info here: https://devcenter.heroku.com/articles/heroku-postgresql#local-setup
+        then check out pg:push
+
+5. Use cool hipster API to make sexy html5 graphs and shit
+
+6. Profit.
